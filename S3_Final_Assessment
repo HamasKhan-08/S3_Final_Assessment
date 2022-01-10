@@ -1,0 +1,239 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+void feed(char reply)
+{
+    switch (reply)
+    {
+    case 'y':
+    case 'Y':
+    {
+        cout << " Thank you for your valuable feedback we will continue to provide this quality of beverages " << endl;
+        break;
+    }
+    case 'n':
+    case'N':
+    {
+        cout << " We are so sorry that we did not meet your requirememts we will continue to improve " << endl;
+        break;
+    }
+    default:
+    {
+        cout << " Invalid Input, DO NOT Enter Number Please Enter 'yes' or 'no' " << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin >> reply;
+
+
+    }
+    }
+}
+
+
+
+int main()
+{
+    int price, total, change, paid, menu, coffee, tea;
+    string choice;
+    char reply;
+    {
+        cout << " Welcome to Hamas' Coffee Brewery, Please select your beverage from the menu below " << endl;
+        cout << " Menu " << endl;
+        cout << " Coffee " << endl;
+        cout << " 1.Ice Coffee..........3 AED " << endl;
+        cout << " 2.Milk Coffee..........2 AED " << endl;
+        cout << " 3.Black Coffee..........1 AED " << endl;
+        cout << "-------------------------------" << endl;
+        cout << " Tea " << endl;
+        cout << " 1.Ice Tea..........3 AED " << endl;
+        cout << " 2.Milk Tea..........2 AED " << endl;
+        cout << " 3.Black Tea..........1 AED " << endl;
+        cout << "--------------------------------" << endl;
+        cout << " Please Input Whether You Would Like To Have Tea Or Coffee  " << endl;
+        cin >> choice;
+        {
+
+            if (choice == "Tea" || choice == "tea" || choice == "TEA")
+            {
+                cout << " You have selected Tea " << endl;
+                cout << " Please enter the number of tea you want, eg: enter '1' if you want Ice Tea " << endl;
+                cin >> tea;
+                while (tea <= 0 || tea >= 4 || cin.fail()) {
+                    cout << " Please enter number upto 3 " << endl;
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cin >> tea;
+                }
+                switch (tea)
+                {
+                case 1:
+                    cout << " You have selected Ice Tea, The Price of Ice Tea Is 3 AED " << endl;
+                    price = 3;
+                    cout << "Pay" << endl;
+                    cin >> paid;
+                    if (paid < price)
+                    {
+                        cout << " Sorry this is incorrect amount Please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+
+                    }
+                    while (cin.fail())
+                    {
+                        cout << " Invalid command entered please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+                    }
+                    change = paid - price;
+                    cout << " Your Change is " << change << "AED" << endl;
+
+                    break;
+                case 2:
+                    cout << " You have selected Milk Tea, The Price of Milk Tea Is 2 AED " << endl;
+                    price = 2;
+                    cout << "Pay" << endl;
+                    cin >> paid;
+                    if (paid < price)
+                    {
+                        cout << " Sorry this is incorrect amount Please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+
+                    }
+                    while (cin.fail())
+                    {
+                        cout << " Invalid command entered please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+                    }
+                    change = paid - price;
+                    cout << " Your Change is " << change << "AED" << endl;
+                    break;
+                case 3:
+                    cout << " You have selected Black Tea, The Price of Black Tea Is 1 AED " << endl;
+                    price = 1;
+                    cout << "Pay" << endl;
+                    cin >> paid;
+                    if (paid < price)
+                    {
+                        cout << " Sorry this is incorrect amount Please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+
+                    }
+                    while (cin.fail())
+                    {
+                        cout << " Invalid command entered please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+                    }
+                    change = paid - price;
+                    cout << " Your Change is " << change << "AED" << endl;
+                    break;
+                default:
+                    cout << " This Is Not An Option " << endl;
+                    break;
+                }
+
+            }
+            else if (choice == "Coffee" || choice == "coffee" || choice == "COFFEE")
+            {
+                cout << " You have selected Coffee " << endl;
+                cout << " Please enter the number of coffee you want, eg: enter '1' if you want Ice Coffee " << endl;
+                cin >> coffee;
+                while (coffee <= 0 || coffee >= 4 || cin.fail()) {
+                    cout << " Please enter number upto 3 " << endl;
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cin >> coffee;
+                }
+                switch (coffee)
+                {
+                case 1:
+                    cout << " You have selected Ice Coffee, The Price of Ice Coffee Is 3 AED " << endl;
+                    price = 3;
+                    cout << "Pay" << endl;
+                    cin >> paid;
+                    if (paid < price)
+                    {
+                        cout << " Sorry this is incorrect amount Please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+
+                    }
+                    while (cin.fail())
+                    {
+                        cout << " Invalid command entered please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+                    }
+                    change = paid - price;
+                    cout << " Your Change is " << change << "AED" << endl;
+
+                    break;
+                case 2:
+                    cout << " You have selected Milk Coffee, The Price of Milk Coffee Is 2 AED " << endl;
+                    price = 2;
+                    cout << "Pay" << endl;
+                    cin >> paid;
+                    if (paid < price)
+                    {
+                        cout << " Sorry this is incorrect amount Please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+
+                    }
+                    while (cin.fail())
+                    {
+                        cout << " Invalid command entered please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+                    }
+                    change = paid - price;
+                    cout << " Your Change is " << change << "AED" << endl;
+
+                    break;
+                case 3:
+                    cout << " You have selected Black Coffee, The Price of Black Coffee Is 1 AED " << endl;
+                    price = 1;
+                    cout << "Pay" << endl;
+                    cin >> paid;
+                    if (paid < price)
+                    {
+                        cout << " Sorry this is incorrect amount Please enter again " << endl;
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cin >> paid;
+
+                    }
+
+
+                    change = paid - price;
+                    cout << " Your Change is " << change << "AED" << endl;
+
+                    break;
+                default:
+                    cout << " This Is Not An Option " << endl;
+                    break;
+
+                }
+                {
+                    cout << " Did you like the taste of your beverage? " << endl;
+                    string reply2;
+                    cin >> reply2;
+                    reply = reply2.at(0);
+                    feed(reply);
+                }
+            }}}
+}
