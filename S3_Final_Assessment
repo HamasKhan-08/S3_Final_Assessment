@@ -35,7 +35,7 @@ void feed(char reply)
 int main()
 {
     int price, total, change, paid, menu, coffee, tea;
-    string choice;
+    string choice, sugar;
     char reply;
     {
         cout << " Welcome to Hamas' Coffee Brewery, Please select your beverage from the menu below " << endl;
@@ -227,6 +227,18 @@ int main()
                     cout << " This Is Not An Option " << endl;
                     break;
 
+                }
+                {
+                    cout << " Do you need sugar with your beverage " << endl;
+                    cin >> sugar;
+                    if (sugar == "yes" || sugar == "Yes" || sugar == "YES" || sugar == "no" || sugar == "No" || sugar == "NO")
+                    {
+                        cout << " Okay Got it " << endl;
+                    }
+                    else
+                    {
+                        cout << " Sorry wrong input, a sachet of sugar will be provided just in case you need it" << endl;
+                    }
                 }
                 {
                     cout << " Did you like the taste of your beverage? " << endl;
